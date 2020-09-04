@@ -1,20 +1,3 @@
-export const PERSIAN_NUMBERS = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
-
-export const PERSIAN_MONTHS = [
-  'فروردین',
-  'اردیبهشت',
-  'خرداد',
-  'تیر',
-  'مرداد',
-  'شهریور',
-  'مهر',
-  'آبان',
-  'آذر',
-  'دی',
-  'بهمن',
-  'اسفند',
-];
-
 export const GREGORIAN_MONTHS = [
   'January',
   'February',
@@ -28,38 +11,6 @@ export const GREGORIAN_MONTHS = [
   'October',
   'November',
   'December',
-];
-
-export const PERSIAN_WEEK_DAYS = [
-  {
-    name: 'شنبه',
-    short: 'ش',
-  },
-  {
-    name: 'یکشنبه',
-    short: 'ی',
-  },
-  {
-    name: 'دوشنبه',
-    short: 'د',
-  },
-  {
-    name: 'سه شنبه',
-    short: 'س',
-  },
-  {
-    name: 'چهارشنبه',
-    short: 'چ',
-  },
-  {
-    name: 'پنجشنبه',
-    short: 'پ',
-  },
-  {
-    name: 'جمعه',
-    short: 'ج',
-    isWeekend: true,
-  },
 ];
 
 export const GREGORIAN_WEEK_DAYS = [

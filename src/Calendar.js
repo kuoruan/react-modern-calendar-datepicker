@@ -17,9 +17,6 @@ const Calendar = ({
   calendarRangeBetweenClassName,
   calendarRangeEndClassName,
   disabledDays,
-  colorPrimary,
-  colorPrimaryLight,
-  slideAnimationDuration,
   minimumDate,
   maximumDate,
   selectorStartingYear,
@@ -52,7 +49,7 @@ const Calendar = ({
   const { weekDays: weekDaysList, isRtl } = useLocaleLanguage(locale);
   const today = getToday();
 
-  const createStateToggler = property => () => {
+  const createStateToggler = (property) => () => {
     setMainState({ ...mainState, [property]: !mainState[property] });
   };
 
@@ -71,13 +68,13 @@ const Calendar = ({
     ? shallowClone(mainState.activeDate)
     : getComputedActiveDate();
 
-  const weekdays = weekDaysList.map(weekDay => (
+  const weekdays = weekDaysList.map((weekDay) => (
     <abbr key={weekDay.name} title={weekDay.name} className="Calendar__weekDay">
       {weekDay.short}
     </abbr>
   ));
 
-  const handleMonthChange = direction => {
+  const handleMonthChange = (direction) => {
     setMainState({
       ...mainState,
       monthChangeDirection: direction,
@@ -92,7 +89,7 @@ const Calendar = ({
     });
   };
 
-  const selectMonth = newMonthNumber => {
+  const selectMonth = (newMonthNumber) => {
     setMainState({
       ...mainState,
       activeDate: { ...activeDate, month: newMonthNumber },
@@ -100,7 +97,7 @@ const Calendar = ({
     });
   };
 
-  const selectYear = year => {
+  const selectYear = (year) => {
     setMainState({
       ...mainState,
       activeDate: { ...activeDate, year },
@@ -112,11 +109,6 @@ const Calendar = ({
     <div
       className={`Calendar -noFocusOutline ${calendarClassName} -${isRtl ? 'rtl' : 'ltr'}`}
       role="grid"
-      style={{
-        '--cl-color-primary': colorPrimary,
-        '--cl-color-primary-light': colorPrimaryLight,
-        '--animation-duration': slideAnimationDuration,
-      }}
       ref={calendarElement}
     >
       <Header
@@ -182,9 +174,6 @@ const Calendar = ({
 Calendar.defaultProps = {
   minimumDate: null,
   maximumDate: null,
-  colorPrimary: '#0eca2d',
-  colorPrimaryLight: '#cff4d5',
-  slideAnimationDuration: '0.4s',
   calendarClassName: '',
   locale: 'en',
   value: null,

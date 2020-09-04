@@ -6,7 +6,16 @@ import { TYPE_SINGLE_DATE, TYPE_RANGE, TYPE_MUTLI_DATE } from './shared/constant
 
 const DatePickerInput = React.forwardRef(
   (
-    { value, inputPlaceholder, inputClassName, inputId, inputName, formatInputText, renderInput, locale },
+    {
+      value,
+      inputPlaceholder,
+      inputClassName,
+      inputId,
+      inputName,
+      formatInputText,
+      renderInput,
+      locale,
+    },
     ref,
   ) => {
     const { getLanguageDigits } = useLocaleUtils(locale);
@@ -44,7 +53,7 @@ const DatePickerInput = React.forwardRef(
     };
 
     const getMultiDateValue = () => {
-      return value.map(date => getLanguageDigits(date.day)).join(`${digitSeparator} `);
+      return value.map((date) => getLanguageDigits(date.day)).join(`${digitSeparator} `);
     };
 
     const getValue = () => {

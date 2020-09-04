@@ -25,9 +25,6 @@ export interface CalendarProps<TValue extends Value> {
   maximumDate?: Day;
   disabledDays?: Day[];
   shouldHighlightWeekends?: boolean;
-  colorPrimary?: string;
-  colorPrimaryLight?: string;
-  slideAnimationDuration?: string;
   calendarClassName?: string;
   calendarTodayClassName?: string;
   calendarSelectedDayClassName?: string;
