@@ -6,11 +6,17 @@ import { terser } from 'rollup-plugin-terser';
 
 const config = {
   input: 'src/index.js',
-  output: {
-    file: 'lib/index.js',
-    format: 'cjs',
-    exports: 'named',
-  },
+  output: [
+    {
+      file: 'lib/index.cjs.js',
+      format: 'cjs',
+      exports: 'named',
+    },
+    {
+      file: 'lib/index.es.js',
+      format: 'es',
+    },
+  ],
   external: ['react', 'react-dom'],
   plugins: [
     resolve(),
