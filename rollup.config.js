@@ -22,6 +22,7 @@ const config = {
     resolve(),
     babel({
       exclude: /node_modules/,
+      babelHelpers: 'bundled',
     }),
     commonjs(),
     copy({
